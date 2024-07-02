@@ -1,13 +1,15 @@
 
 public class Pizza extends Produtos{
 	private String ingredientes;
+	private String modoDePreparo;
 	private Double tempoDePreparo;
 	
-	public Pizza(String nome, Double valor, String ingredientes, Double tempoDePreparo) {
+	public Pizza(String nome, Double valor, String ingredientes, String modoDePreparo, Double tempoDePreparo) {
 		super(nome, valor);
 		this.ingredientes = ingredientes;
+		this.modoDePreparo = modoDePreparo;
 		this.tempoDePreparo = tempoDePreparo;
-		
+				
 	}
 	
 	public String getIngredientes() {
@@ -23,9 +25,17 @@ public class Pizza extends Produtos{
 		this.tempoDePreparo = tempoDePreparo;
 	}
 
+	public String getModoDePreparo() {
+		return modoDePreparo;
+	}
+
+	public void setModoDePreparo(String modoDePreparo) {
+		this.modoDePreparo = modoDePreparo;
+	}
+
 	@Override
 	public String preparar() {
-		return this.ingredientes + this.tempoDePreparo;
+		return this.ingredientes + " " + this.modoDePreparo + " " + this.tempoDePreparo + " minutos";
 	}
 	
 }

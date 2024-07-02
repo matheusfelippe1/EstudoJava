@@ -16,7 +16,7 @@ public class BebidasProntas extends Produtos{
 	}
 	
 	public String preparar() {
-		return getNome() + getValor() + this.tipo;
+		return getNome() + " " + getValor() + " " + this.tipo;
 	}
 	
 }
